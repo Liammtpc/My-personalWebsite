@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  @font-face {
+    font-family: 'sans';
+    src: url('font/IRANSans 400.ttf') format('truetype');
+}
+body{
+    direction: rtl;
+}
+.container{
+    width: 1350px auto;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px auto;
+}
+header nav ul li a{
+    font-size: 16px;
+}
+header nav ul li a:hover{
+    color: #5f99ae;
+}
+.searchBoxAndLogin a{
+    background-color: #5f99ae;
+    color:#fff;
+    padding: 8px;
+    border-radius: 5px;
+}
