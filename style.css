@@ -9,22 +9,37 @@
 }
 body{
     direction: rtl;
+    font-family: 'sans';
 }
 .container{
-    width: 1350px auto;
+    width: 1350px;
+    margin: 0 auto;
+    position: relative;
 }
-header{
+header,main{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    z-index: 10;
 }
 a{
     text-decoration: none;
     color: black;
+    font-size: 18px;
 }
+h1{
+    color: #336d82;
+}
+
 li{
     list-style: none;
+}
+p{
+    color: #595959;
+}
+header nav{
+    z-index: 10;
 }
 header nav ul{
     display: flex;
@@ -34,14 +49,104 @@ header nav ul{
     margin: 24px auto;
 }
 header nav ul li a{
-    font-size: 16px;
+    font-weight: bold;
 }
 header nav ul li a:hover{
     color: #5f99ae;
+}
+.searchBoxAndLogin{
+    z-index: 10;
 }
 .searchBoxAndLogin a{
     background-color: #5f99ae;
     color:#fff;
     padding: 8px;
     border-radius: 5px;
+    z-index: 3;
+}
+.banner-right a:hover,.searchBoxAndLogin a:hover{
+    background: transparent;
+    border: 1px solid #5f99ae;
+    color: #5f99ae;
+}
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.banner .banner-right,.banner .banner-left{
+    width: 50%;
+}
+.banner .banner-right{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 32px 0 0;
+    position: relative;
+}
+.banner-right p{
+    line-height: 2.5;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 17px;
+}
+.banner-right a{
+    background-color: #5f99ae;
+    padding: 8px 32px;
+    color: #fff;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    position: absolute;
+    left: 16px;
+    bottom: 0;
+}
+.banner .banner-left .banner-picture{
+    width: 500px;
+    height: 630px;
+    background-color: #f5ece0;
+    border-radius: 0 0 250px 250px;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    z-index: 1;
+}
+.banner-picture img{
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 85px;
+}
+@media only screen and(min-width:600px)and(max-width:900px){
+.container{
+    width: 900px;
+}
+}
+@media only screen and (max-width: 576px) {
+  .container{
+    width: 100%;
+  }
+  header nav{
+    display: none;
+}
+  .banner{
+    flex-direction: column-reverse;
+  }
+.banner .banner-left{
+    width: 100%;
+    position: relative;
+}
+.banner .banner-right{
+    width: 100%;
+}
+.banner .banner-left .banner-picture{
+    position: relative;
+    width: auto;
+    height: 560px;
+    top: -20px;
+    left: 0;
+}
 }
