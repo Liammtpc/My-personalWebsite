@@ -27,6 +27,7 @@ a{
     text-decoration: none;
     color: black;
     font-size: 18px;
+    transition: all .3s;
 }
 h1{
     color: #336d82;
@@ -37,6 +38,9 @@ li{
 }
 p{
     color: #595959;
+}
+#logo{
+    z-index: 16;
 }
 header nav{
     z-index: 10;
@@ -75,12 +79,12 @@ header nav ul li a:hover{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 140px;
 }
 .banner .banner-right,.banner .banner-left{
     width: 50%;
 }
 .banner .banner-right{
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,33 +124,55 @@ header nav ul li a:hover{
   bottom: 0;
   left: 85px;
 }
-@media only screen and(min-width:600px)and(max-width:900px){
+/*********************/
+@media only screen and (min-width:600px) and (max-width:900px){
 .container{
     width: 900px;
+}
+header{
+    width: 90%;
+    margin: 0 auto;
+}
+.banner{
+    padding: 0;
+}
+.banner .banner-left .banner-picture{
+    width: 400px;
+    height: 530px;
 }
 }
 @media only screen and (max-width: 576px) {
   .container{
     width: 100%;
   }
+  header{
+    width: 90%;
+    margin: 20px auto;
+}
   header nav{
     display: none;
 }
   .banner{
     flex-direction: column-reverse;
+    padding: 0;
   }
 .banner .banner-left{
     width: 100%;
     position: relative;
 }
 .banner .banner-right{
-    width: 100%;
+    width: 90%;
+    margin: 0 0 32px;
+}
+.banner .banner-right a{
+    left: 0;
+    bottom: -25px;
 }
 .banner .banner-left .banner-picture{
     position: relative;
     width: auto;
     height: 560px;
-    top: -20px;
+    top: -60px;
     left: 0;
 }
 }
