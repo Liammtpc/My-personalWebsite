@@ -20,9 +20,22 @@ window.addEventListener("load", () => {
   const bars=document.querySelector("#bars");
   const menuBar=document.querySelector(".menuBar");
   const xmark=document.querySelector("#xMark");
+  const xmarkSearchBox=document.querySelector("#xMarks");
+  const searchBox=document.querySelector("#searchBox");
+  const formsearchBox=document.querySelector(".searchBox");
   bars.addEventListener("click",()=>{
     menuBar.style.display="flex";
   })
   xmark.addEventListener("click",()=>{
     menuBar.style.display="none";
+  })
+  searchBox.addEventListener("click",(e)=>{
+    e.preventDefault();
+    formsearchBox.style.display="flex";
+    formsearchBox.style.top=0;
+  })
+  xmarkSearchBox.addEventListener("click",(e)=>{
+    e.preventDefault();
+    formsearchBox.style.display="none";
+    formsearchBox.style.top="-1000px";
   })
