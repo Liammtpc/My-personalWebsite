@@ -113,7 +113,7 @@ header nav ul li a:hover{
     border-radius: 5px;
     z-index: 3;
 }
-.banner-right a:hover,.searchBoxAndLogin a:hover,.gallery .title a:hover{
+.banner-right a:hover,.searchBoxAndLogin a:hover,.gallery .title a:hover,.about-right a:hover{
     background: transparent;
     border: 1px solid #5f99ae;
     color: #5f99ae;
@@ -191,7 +191,7 @@ header nav ul li a:hover{
     text-align: justify;
     font-size: 17px;
 }
-.banner-right a{
+.banner-right a,.about-right a{
     background-color: #5f99ae;
     padding: 8px 32px;
     color: #fff;
@@ -679,6 +679,82 @@ footer .subfooter{
     color: #fff;
     font-weight: bolder;
 }
+.about{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 32px auto;
+    flex-wrap: wrap;
+}
+.about-right{
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.about-right p{
+    line-height: 2;
+    text-align: justify;
+    margin: 32px;
+}
+.about-right a{
+    left: 28px;
+}
+.about-left{
+    width: 40%;
+    background: #f5ece0;
+    border-radius: 250px;
+}
+.connections{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 64px auto 140px;
+    flex-wrap: wrap;
+}
+.connectionCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 325px;
+    height: 75px;
+    border-radius: 5px;
+     box-shadow: 0px 0px 1px 1px #9898985c;
+     gap: 20px;
+     opacity: 0;
+     margin: 8px auto;
+    transition: 1s;
+}
+.connectionCard a{
+    padding: 16px;
+    border-radius: 5px;
+    background-image:radial-gradient( #f5ece0, #fff);;
+    color: #336d82;
+}
+.textConnectionCard{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.textConnectionCard p{
+    font-size: 14px;
+}
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 24px auto;
+}
+.shows2{
+    opacity: 1;
+    animation: rightToLeft .3s ease-in;
+}
 /*********************/
 @media only screen and (min-width:600px) and (max-width:900px){
 .container{
@@ -775,6 +851,7 @@ header nav ul li a{
     width: 85%;
 }
 }
+/*************/
 @keyframes slices {
     0%{
         transform:scale(0);
@@ -783,5 +860,14 @@ header nav ul li a{
     }100%{
         transform: scale(1);
         opacity: 1;
+    }
+}
+@keyframes rightToLeft {
+    0%{
+            position: absolute;
+            right: -1000px;
+    }100%{
+        position: absolute;
+        right: 0;
     }
 }
