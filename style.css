@@ -23,6 +23,9 @@ header,main{
     justify-content: space-between;
     z-index: 10;
 }
+main{
+    flex-direction: column;
+}
 a{
     text-decoration: none;
     color: black;
@@ -749,11 +752,112 @@ footer .subfooter{
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 24px auto;
+    margin: 24px auto 0;
 }
 .shows2{
     opacity: 1;
     animation: rightToLeft .3s ease-in;
+}
+.searchBoxBloge{
+    width: 100%;
+    margin: 52px auto 0;
+}
+.searchBoxBloge form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.searchBoxBloge form input{
+    width: 450px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 16px;
+    font-family: 'sans';
+    font-size: 18px;
+}
+.searchBoxBloge form button{
+    background-color:#5f99ae;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+}
+.searchBoxBloge form button a{
+    width: 100%;
+    height: 100%;
+    background-color: #5f99ae;
+    color: #fff;
+}
+.searchBoxBloge form button:hover{
+    background-color: #336d82;
+}
+.searchBoxBloge form button a span{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+#category{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 28px auto;
+}
+.allCategory{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-evenly;
+}
+.allCategory a i{
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #336d82;
+    color: #336d82;
+    font-weight: bold;
+    transition: all .3s;
+    gap: 8px;
+}
+.allCategory a i:hover{
+    background-color: #5f99ae;
+    color: #fff;
+    border: none;
+}
+#pictureBloge{
+    width: 95%;
+}
+.page{
+    margin: 0px auto 24px;
+}
+.warp{
+    flex-wrap: wrap;
+}
+.navgaition{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 56px;
+}
+.navgaition a{
+    background-color: #d3d3d3;
+    padding: 12px 16px;
+    border-radius: 5px;
+}
+.navgaition a.active{
+  background-color: #336d82;
+}
+.navgaition a:hover{
+    background: #5f99ae;
+    color: #fff;
 }
 /*********************/
 @media only screen and (min-width:600px) and (max-width:900px){
