@@ -991,7 +991,6 @@ footer .subfooter{
          width: 300%;
          height: 100%;
          background: #336d82;
-         /* border: 2px solid red; */
          border-radius: 150px;
          z-index: 2;
          transition: 1.8s ease-in-out;
@@ -1003,7 +1002,6 @@ footer .subfooter{
      position: absolute;
      width: 50%;
      height: 100%;
-     /* background: seagreen; */
      color: #fff;
      display: flex;
      flex-direction: column;
@@ -1039,6 +1037,146 @@ footer .subfooter{
          background: transparent;
          border: 2px solid #fff;
          box-shadow: none;
+     }
+     .widths{
+        width: 70%;
+     }
+     .panel{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px auto;
+     }
+     .sideBar{
+        width: 20%;
+        background-color: #336d82;
+        height: 700px;
+        position: sticky;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+     
+     }
+     .sideBar img{
+        width: 150px;
+        aspect-ratio: 1/1;
+        border:2px double #f5ece0;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 32px auto;
+     }
+     .sideBar ul li a{
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        margin: 8px auto;
+        color: #f5ece0;
+        align-items: center;
+        padding: 0 16px;
+     }
+     .sideBar ul li a:hover{
+        background-color: #f5ece04c;
+     }
+     .sideBar ul li a span{
+        display: flex;
+        gap: 16px;
+     }
+     .dashbords{
+        width: 78%;
+        height: 700px;
+        margin: 0 auto;
+        overflow-y: auto;
+        visibility: visible;
+  
+     }
+     .dashbords h2{
+        margin: 20px 20px 0 20px;
+     }
+     .dashbords::-webkit-scrollbar{
+        color: #336d82;
+     }
+ .titleinpanel{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+     .goals{
+        width: 87%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+     }
+     .goal{
+        width: 450px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+        margin: 16px auto;
+        opacity: 1;
+        transition:.5s;
+        border-left: 2px solid #888;
+     }
+     .goal:nth-child(even){
+         justify-content: end;
+         margin: 24px auto;
+         border-right: 2px solid #888;
+         border-left:0 ;
+     }
+     .goal.even{
+        margin: 20px auto;
+     }
+     .GalleyandBloge,.orderCustomer{
+        width: 95%;
+        margin: 24px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .lastBloge,.lastGallery{
+        width: 48%;
+     }
+     .lastBloge img, .lastGallery img{
+        width: 120px;
+        aspect-ratio: 1/.5;
+     }
+     .lastBloge table,.lastGallery table,.orderCustomer table{
+        width: 95%;
+        border-collapse: collapse;
+     }
+     .lastBloge table tr,.lastGallery table tr,.orderCustomer table tr{
+        border:1px solid #989898;
+        z-index: 2;
+     }
+     .lastBloge table th,.lastGallery table th{
+        background-color: #5f99ae;
+        text-align: center;
+        padding: 12px;
+        color: #f5ece0;
+        border-left:3px solid #f5ece0;
+     }
+     .orderCustomer table th{
+        background-color: #5f99ae;
+        text-align: center;
+        padding: 12px;
+        color: #f5ece0;
+        border-left:3px solid #f5ece0;
+     }
+     .lastBloge table td,.lastGallery table td,.orderCustomer table td{
+        text-align: center;
+        padding: 8px;
+        color: #888;
+     }
+     .orderCustomer table{
+        width: 95%;
+        margin: 0 auto;
      }
 /*********************/
 @media only screen and (min-width:600px) and (max-width:900px){
