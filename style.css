@@ -627,7 +627,19 @@ figure{
     font-size: 18px;
     transition: all .3s;
 }
-.contacts form .right-form button:hover{
+.contacts form .left-form button{
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    margin: 16px 0;
+    background-color: #5f99ae;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: all .3s;
+    display: none;
+}
+.contacts form .right-form button:hover,.contacts form .left-form button:hover{
     color: #336d82;
     border: 1px solid #336d82;
     background-color: transparent;
@@ -1301,13 +1313,14 @@ footer .subfooter{
      }
      .dispalyListToDo ul li{
         border: 1px solid #d3d3d3;
-        width: 60%;
+        width: 50%;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 16px;
-        margin: 0 auto;
+        margin: 4px auto;
+        border-radius: 5px;
      }
      .dispalyListToDo ul li:hover{
         background-color: #f5ece038;
@@ -1322,10 +1335,19 @@ footer .subfooter{
         font-size: 20px;
         cursor: pointer;
      }
+     #xMarkspanel{
+        z-index: 10;
+        position: absolute;
+        top: 16px;
+        left:16px;
+        color: #f5ece0;
+        font-size: 20px;
+        visibility: hidden;
+     }
 /*********************/
 @media only screen and (min-width:600px) and (max-width:900px){
 .container{
-    width: 900px;
+    width:768px;
 }
 header{
     width: 90%;
@@ -1350,6 +1372,61 @@ header{
 .menuBar{
     gap: 60px;
     transition: all .3s;
+}
+.part-service{
+    overflow-x: auto;
+    scrollbar-color: #5f99ae #ffff;
+    scrollbar-width:thin;
+}
+.service-section{
+    width: 275px;
+    height: 250px;
+}
+#section3{
+width: 225px;
+}
+.picture-left{
+    display: none;
+}
+.bolges .sectionBloges .bloge{
+    width: 420px;
+    padding: 8px;
+}
+.bolges .sectionBloges{
+    width: 100%;
+    overflow-x: auto;
+    gap: 16px;
+    scrollbar-color: #5f99ae #ffff;
+    scrollbar-width:thin;
+}
+#center{
+    margin: 0 auto;
+}
+#gap{
+    gap: 12px;
+    margin: 0 auto;
+}
+.pictures .picture-right{
+    width: 100%;
+    justify-content: center;
+}
+.contacts form .left-form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacts form .right-form button{
+    display: none;
+}
+.contacts form{flex-wrap: wrap;}
+.bolges{
+    flex-wrap: wrap;
+}
+.allCategory{
+    flex-wrap: wrap;
+}
+#gapsUl{
+    gap: 16px;
 }
 /**************/
 #login{ height: calc(100vh - 40px); }
@@ -1399,6 +1476,9 @@ header{
   .container{
     width: 100%;
   }
+  p{
+    padding: 0 8px;
+}
   header{
     width: 90%;
     margin: 20px auto;
@@ -1459,6 +1539,103 @@ header nav ul li a{
 }
 .searchBox form{
     width: 85%;
+}
+.part-service{
+    overflow-x: auto;
+    scrollbar-color: #5f99ae #ffff;
+    scrollbar-width:thin;
+}
+.service-section{
+    width: 275px;
+    height: 250px;
+}
+#section3{
+width: 225px;
+}
+.skillfulls{
+    width: 100%;
+    gap: 12px;
+    padding: 4px;
+    overflow-x: auto;
+}
+.skill{
+    height: 120px;
+}
+.category{
+    flex-wrap: wrap;
+}
+.pictures .picture-right{
+    display: none;
+}
+.bolges .sectionBloges .bloge{
+    width: 420px;
+    padding: 8px;
+}
+.bolges .sectionBloges{
+    width: 100%;
+    overflow-x: auto;
+    gap: 16px;
+    scrollbar-color: #5f99ae #ffff;
+    scrollbar-width:thin;
+}
+#center{
+    margin: 0 auto;
+}
+#gap{
+    gap: 12px;
+    margin: 0 auto;
+}
+.contacts form{flex-wrap: wrap;}
+.menuBar.footer{
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 0;
+    align-items: center;
+}
+.menuBar.footer .subfooter nav ul{
+    gap: 16px;
+}
+.pictures .picture-left img{
+    width: 400px;
+}
+.title{
+    width: 90%;
+    flex-direction: row;
+}
+.contacts form .left-form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacts form .right-form button{
+    display: none;
+}
+#xMarkspanel{
+    visibility: visible;
+}
+.sideBar{
+    width: 100%;
+    position: fixed;
+    right: -1000px;
+    top: 0;
+    height: 100%;
+    transition: .3s;
+
+}
+.GalleyandBloge{
+    flex-wrap: wrap;
+}
+.lastBloge, .lastGallery{
+    width: 95%;
+    margin: 8px auto;
+}
+.allCategory{
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.searchBoxBloge form input{
+    width: 295px;
 }
 /*********************/
 #login{
