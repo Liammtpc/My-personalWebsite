@@ -508,7 +508,7 @@ top: 22px;
     gap: 36px;
 }
 .pictures .picture-left img{
-    width: 545px;
+    width: 677px;
     mask-image: url(Picture/mask2.png);
     mask-repeat: no-repeat;
     mask-size: contain;
@@ -518,6 +518,7 @@ top: 22px;
     width: 350px;
     aspect-ratio: 1/1;
     mask-image: url(Picture/Subtract\ \(2\).png);
+    object-fit: cover;
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
@@ -550,7 +551,7 @@ figure{
 }
 #a3{
     bottom: 9px;
-    left: 110px;
+    left: 150px;
 }
 .bolges{
     width: 100%;
@@ -763,7 +764,7 @@ footer .subfooter{
 .title{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 24px auto 0;
 }
 .shows2{
@@ -1636,6 +1637,10 @@ width: 225px;
 }
 .searchBoxBloge form input{
     width: 295px;
+}
+#a3 {
+    bottom: 5px;
+    left: 90px;
 }
 /*********************/
 #login{

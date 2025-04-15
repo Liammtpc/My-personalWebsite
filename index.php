@@ -267,24 +267,36 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                 </div>
                 <div class="pictures">
                     <div class="picture-right">
-                        <figure>
-                            <img src="Picture/picture2.png" alt="" class="img1">
+                        <?php
+                        $showGallery = mysqli_query($db, "select*from gallery where 1 limit 1");
+                        $showGallery1 = mysqli_query($db, "select*from gallery where 1 limit 2 offset 1");
+                        while ($rowShowGallery = mysqli_fetch_array($showGallery)) {
+                            echo '
+                            <figure>
+                            <img src="' . $rowShowGallery['Picture'] . '" alt="" class="img1">
                             <a href="" id="a1">نمایش بیشتر</a>
-                        </figure>
-                        <figure>
-                            <img src="Picture/picture3.png" alt="" class="img2">
+                            </figure>';
+                        }
+                        while ($rowShowGallery1 = mysqli_fetch_array($showGallery1)) {
+                            echo '
+                            <figure>
+                            <img src="' . $rowShowGallery1['Picture'] . '" alt="" class="img2">
                             <a href="" id="a2">نمایش بیشتر</a>
-                        </figure>
-                        <figure>
-                            <img src="Picture/picture4.png" alt="" class="img2">
-                            <a href="" id="a2">نمایش بیشتر</a>
-                        </figure>
+                            </figure>';
+                        }
+                        ?>
                     </div>
                     <div class="picture-left">
-                        <figure>
-                            <img src="Picture/picture1.png" alt="">
+                        <?php
+                        $showGallery3 = mysqli_query($db, "select*from gallery where 1 limit 1 offset 3");
+                        while ($rowShowGallery3 = mysqli_fetch_array($showGallery3)) {
+                            echo '
+                            <figure>
+                            <img src="' . $rowShowGallery3['Picture'] . '" alt="" class="img1">
                             <a href="" id="a3">نمایش بیشتر</a>
-                        </figure>
+                            </figure>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -294,21 +306,18 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                 <h2>مقالات</h2>
                 <p>آخرین مقالات منتشر شده در این سایت</p>
                 <div class="sectionBloges">
-                    <div class="bloge">
-                        <img src="Picture/picture2.png" alt="">
-                        <strong>Javascript چیست؟</strong>
+                    <?php
+                       $showBloge = mysqli_query($db, "select*from bloge where 1 limit 3");
+                       while($rowShowBloge=mysqli_fetch_array($showBloge)){
+                        echo'
+                        <div class="bloge">
+                        <img src="'.$rowShowBloge['Picture'].'" alt="">
+                        <strong>'.$rowShowBloge['Title'].'</strong>
                         <a href="">مطالعه بیشتر</a>
-                    </div>
-                    <div class="bloge">
-                        <img src="Picture/picture3.png" alt="">
-                        <strong>Wordpress چیست؟</strong>
-                        <a href="">مطالعه بیشتر</a>
-                    </div>
-                    <div class="bloge">
-                        <img src="Picture/picture4.png" alt="">
-                        <strong>Html چیست؟</strong>
-                        <a href="">مطالعه بیشتر</a>
-                    </div>
+                        </div>
+                        ';
+                       }
+                    ?>
                 </div>
             </div>
         </section>
@@ -384,7 +393,7 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                 </nav>
             </div>
             <div class="social">
-                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Liammtpc"><i class="fa-brands fa-github"></i></a>
                 <a href=""><i class="fa-brands fa-telegram"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-brands fa-whatsapp"></i></a>
