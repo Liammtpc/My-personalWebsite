@@ -1583,6 +1583,16 @@ width: 225px;
     scrollbar-color: #5f99ae #ffff;
     scrollbar-width:thin;
 }
+.about{
+    flex-direction: column-reverse;
+}
+.about-right{
+width: 95%;
+margin: 0 auto;
+}
+.about-left{
+    width: 95%;
+}
 #center{
     margin: 0 auto;
 }
