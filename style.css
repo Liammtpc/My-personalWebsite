@@ -48,6 +48,9 @@ li{
 p{
     color: #595959;
 }
+.title.column{
+    flex-direction: column;
+}
 .shows{
     opacity: 1;
 }
@@ -566,9 +569,10 @@ figure{
     align-items: center;
     justify-content: space-evenly;
     margin: 24px auto;
+    gap: 8px;
 }
 .bolges .sectionBloges .bloge{
-    width: 30%;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -578,7 +582,7 @@ figure{
     margin: 20px auto;
 }
 .bolges .sectionBloges .bloge img{
-    width: 385px;
+    width: 95%;
     height: 200px;
     border-radius: 5px;
 }
