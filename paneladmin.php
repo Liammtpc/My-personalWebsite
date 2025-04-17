@@ -193,7 +193,7 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                                         <th>عنوان</th>
                                     </tr>
                                     <?php
-                                    $showbloge = mysqli_query($db, "select*from bloge where 1 limit 3");
+                                    $showbloge = mysqli_query($db, "select*from bloge ORDER BY Title DESC LIMIT 3");
                                     while ($rowshowbloge = mysqli_fetch_array($showbloge)) {
                                         echo '
                                             <tr>
@@ -214,7 +214,7 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                                         <th>عنوان</th>
                                     </tr>
                                     <?php
-                                    $showGallery = mysqli_query($db, "select*from gallery where 1 limit 3");
+                                    $showGallery = mysqli_query($db, "select*from gallery ORDER BY Title DESC LIMIT 3");
                                     while ($rowshowGallery = mysqli_fetch_array($showGallery)) {
                                         echo '
                                             <tr>
@@ -243,7 +243,7 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                                         <th>توضیحات</th>
                                     </tr>
                                     <?php
-                                    $showOrder = mysqli_query($db, "select*from orders where 1 limit 3");
+                                    $showOrder = mysqli_query($db, "select*from orders ORDER BY Title DESC LIMIT 3");
                                     while ($rowShowOrder = mysqli_fetch_array($showOrder)) {
                                         echo '
                                             <tr>
@@ -267,5 +267,4 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
 </body>
 <script src="Javascript/scroll.js"></script>
 <script src="Javascript/panel.js"></script>
-
 </html>
