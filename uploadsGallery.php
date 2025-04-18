@@ -53,15 +53,46 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                         <div class="profile">
                             <form action="">
                                 <label for="">عنوان</label>
-                                <input type="text" placeholder="عنوان">
+                                <input type="text" placeholder="عنوان" name="Title">
+                                <label for="">دسته بندی</label>
+                                <input type="text" placeholder="دسته بندی" name="Category">
                                 <label for="">تاریخ بارگذاری</label>
-                                <input type="text" placeholder="تاریخ بارگذاری">
+                                <input type="text" placeholder="تاریخ بارگذاری" name="historys">
                                 <label for="">توضیحات</label>
-                                <textarea name="" id="" placeholder="متن مقاله"></textarea>
-                                <input type="file" id="flies">
+                                <textarea name="Discription" id="" placeholder="متن نمونه"></textarea>
+                                <input type="file" id="flies" name="picture">
                                 <label for="flies" id="uplaods">بارگذاری عکس</label>
                                 <button>ارسال</button>
                             </form>
+                            <?php
+                            $ok = false;
+                            $error = "";
+                            if (isset($_POST["Title"])) {
+                                $Title = $_POST["Title"];
+                                $Category = $_POST["Category"];
+                                $Discription = $_POST["Discription"];
+                                $target_dir = "Picture/";
+                                $target_file = $target_dir . basename($_FILES["picture"]["name"]);
+                                if (isset($_POST["submit"])) {
+                                    if (move_uploaded_file($_FILES["picture"]["tmp_name"],  $target_file)) {
+                                        echo "آپلود من با موفقیت انجام شد";
+                                    } else {
+                                        echo "آپلود ناموفق";
+                                    }
+                                }
+                                if (empty($Title)) {
+                                    echo $error = "عنوان خود را وادکنید.";
+                                    $ok = false;
+                                }
+                                if ($error == "") {
+                                    $ok = true;
+                                }
+                                if ($ok == true) {
+                                    $insertBloge = mysqli_query($db, "INSERT INTO gallery(Title,Picture,Discription,Category)VALUES('$Title',' $target_file','$Discription','$Category')");
+                                    echo '<p>آپلود با موفقیت انجام شد.</p>';
+                                }
+                            }
+                            ?>
                         </div>
                     </section>
                     <section>
