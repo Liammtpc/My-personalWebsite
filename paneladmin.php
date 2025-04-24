@@ -24,25 +24,25 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                     <nav>
                         <ul>
                             <li>
-                                <a href=""><span class="fa-solid fa-gauge">داشبورد</span></a>
+                                <a href="paneladmin.php"><span class="fa-solid fa-gauge">داشبورد</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-user">پروفایل</span></a>
+                                <a href="profile.html"><span class="fa-solid fa-user">پروفایل</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-add">اضافه کردن مقاله</span></a>
+                                <a href="uploadsBloge.php"><span class="fa-solid fa-add">اضافه کردن مقاله</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-add">اضافه کردن نمونه</span></a>
+                                <a href="uploadsGallery.php"><span class="fa-solid fa-add">اضافه کردن نمونه</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-bell">کنترل شفارشات</span></a>
+                                <a href="controlOrder.php"><span class="fa-solid fa-bell">کنترل شفارشات</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-list-check">اهداف روزانه</span></a>
+                                <a href="toDo.Html"><span class="fa-solid fa-list-check">اهداف روزانه</span></a>
                             </li>
                             <li>
-                                <a href=""><span class="fa-solid fa-right-from-bracket">خروج</span></a>
+                                <a href="loginout.php"><span class="fa-solid fa-right-from-bracket">خروج</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -267,4 +267,5 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
 </body>
 <script src="Javascript/scroll.js"></script>
 <script src="Javascript/panel.js"></script>
+
 </html>
